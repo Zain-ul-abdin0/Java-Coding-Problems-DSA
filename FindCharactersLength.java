@@ -1,9 +1,13 @@
 import javax.swing.text.html.parser.Entity;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+
 public class FindCharactersLength {
    public static void main(String[] args){
-       String characters = "zansakdsandksandsakndsa";
+       Scanner scanner = new Scanner(System.in);
+       System.out.print("Enter a string: ");
+       String characters = scanner.nextLine();
        char[] charArray = characters.toCharArray();
        HashMap<Character, Integer> hashMap = new HashMap<>();
        for(char character : charArray){
