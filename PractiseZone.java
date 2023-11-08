@@ -67,6 +67,13 @@ public class PractiseZone {
         List<Man> result = men.stream().filter(item->item.getAge().equals(23)).map(item-> new Man("Zain", 99)).collect(Collectors.toList());
         System.out.println(result);
 
+        System.out.println(arrayList1);
+
+       List<String> arrayList2 =  arrayList1.stream().skip(1).limit(1).collect(Collectors.toList());
+        System.out.println(arrayList2);
+
+        List<Man> arrayList3=  men.stream().sorted(((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()))).collect(Collectors.toList());
+        System.out.println(arrayList3);
     }
 
 }
